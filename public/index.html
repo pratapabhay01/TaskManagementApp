@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="auth-card">
+
+            <h1>Task Manager</h1>
+            <p class="subtitle">Manage your tasks efficiently</p>
+
+            <!-- Login -->
+            <div id="loginSection">
+
+                <h2>Login</h2>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email"
+                >
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                >
+
+                <button onclick="login()">Login</button>
+
+                <p>
+                    Don't have an account?
+                    <span onclick="showRegister()">Register</span>
+                </p>
+
+            </div>
+
+
+            <!-- Register -->
+            <div id="registerSection" class="hidden">
+
+                <h2>Create Account</h2>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Full Name"
+                >
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Email"
+                >
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Password"
+                >
+
+                <button onclick="register()">Register</button>
+
+                <p>
+                    Already have an account?
+                    <span onclick="showLogin()">Login</span>
+                </p>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

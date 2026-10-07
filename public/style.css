@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+
+/* =========================
+   LOGIN / REGISTER
+========================= */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.auth-card h2 {
+    margin-bottom: 20px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background: #2563eb;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.auth-card button {
+    width: 100%;
+}
+
+.auth-card p {
+    margin-top: 18px;
+    text-align: center;
+    color: #666;
+}
+
+.auth-card span {
+    color: #2563eb;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    color: #d11a2a;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+
+/* Header */
+
+.header {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.header h1 {
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #777;
+}
+
+.logout-btn {
+    background: #dc2626;
+    width: auto;
+}
+
+
+/* Task Form */
+
+.task-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.task-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+
+/* Tasks */
+
+.tasks-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-heading button {
+    width: auto;
+    background: #16a34a;
+}
+
+
+/* Task Card */
+
+.task-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-content h3 {
+    margin-bottom: 8px;
+}
+
+.task-content p {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.task-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.task-info span {
+    background: #f1f5f9;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.task-actions button {
+    width: auto;
+    background: #2563eb;
+}
+
+.task-actions .delete-btn {
+    background: #dc2626;
+}
+
+.no-tasks {
+    text-align: center;
+    color: #777;
+    padding: 30px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .logout-btn {
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .task-card {
+        flex-direction: column;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+
+    .task-actions button {
+        flex: 1;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .section-heading button {
+        width: 100%;
+    }
+
+    .auth-card {
+        padding: 25px;
+    }
+}
