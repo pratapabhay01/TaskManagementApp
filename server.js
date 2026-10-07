@@ -1,3 +1,4 @@
+const path = require("path");
 const taskRoutes = require("./routes/tasks");
 const express = require("express");
 const mongoose = require("mongoose");
@@ -25,8 +26,10 @@ mongoose.connect(process.env.MONGO_URI)
     });
 
 // Test Route
+
+
 app.get("/", (req, res) => {
-    res.send("Task Management API is running!");
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 const PORT = process.env.PORT || 3000;
